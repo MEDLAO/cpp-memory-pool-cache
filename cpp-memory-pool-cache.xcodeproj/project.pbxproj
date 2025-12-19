@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFD68C302EF5C783000B57C1 /* MemoryPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFD68C2E2EF5C783000B57C1 /* MemoryPool.cpp */; };
 		BFF12CB02EF31FE50029F128 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF12CAF2EF31FE50029F128 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BFD68C2E2EF5C783000B57C1 /* MemoryPool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryPool.cpp; sourceTree = "<group>"; };
+		BFD68C2F2EF5C783000B57C1 /* MemoryPool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MemoryPool.hpp; sourceTree = "<group>"; };
 		BFF12CAC2EF31FE50029F128 /* cpp-memory-pool-cache */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cpp-memory-pool-cache"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF12CAF2EF31FE50029F128 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				BFF12CAF2EF31FE50029F128 /* main.cpp */,
+				BFD68C2E2EF5C783000B57C1 /* MemoryPool.cpp */,
+				BFD68C2F2EF5C783000B57C1 /* MemoryPool.hpp */,
 			);
 			path = "cpp-memory-pool-cache";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD68C302EF5C783000B57C1 /* MemoryPool.cpp in Sources */,
 				BFF12CB02EF31FE50029F128 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
