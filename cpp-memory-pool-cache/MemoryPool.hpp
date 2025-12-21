@@ -14,11 +14,12 @@
 
 class MemoryPool {
 public:
-    // Constructor: creates a pool with fixed-size blocks
-    MemoryPool(std::size_t blockSize, std::size_t blockCount);
-
+    MemoryPool(std::size_t size);
+    
 private:
-    unsigned char* buffer; // points to raw memory owned by the pool
+    unsigned char* buffer; // start of memory
+    std::size_t totalSize; // total bytes owned by the pool
+    
 };
 
 #endif /* MemoryPool_hpp */
