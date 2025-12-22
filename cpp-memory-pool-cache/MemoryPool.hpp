@@ -15,6 +15,7 @@
 class MemoryPool {
 public:
     MemoryPool(std::size_t size);
+    ~MemoryPool();
     
 private:
     unsigned char* buffer; // start of memory

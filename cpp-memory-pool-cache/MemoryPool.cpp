@@ -11,3 +11,8 @@ MemoryPool::MemoryPool(std::size_t size) : buffer(nullptr), totalSize(size)
 {
     
 }
+
+MemoryPool::~MemoryPool()
+{
+    delete[] buffer;
+}
