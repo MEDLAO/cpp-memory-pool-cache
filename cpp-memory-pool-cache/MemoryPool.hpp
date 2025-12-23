@@ -12,6 +12,10 @@
 #pragma once
 #include <cstddef>  // for size_t
 
+struct FreeBlock {
+    FreeBlock* next;
+};
+
 class MemoryPool {
 public:
     MemoryPool(std::size_t size);
@@ -20,6 +24,9 @@ public:
 private:
     unsigned char* buffer; // start of memory
     std::size_t totalSize; // total bytes owned by the pool
+    std::size_t blocksize;
+    std::size_t blockCount;
+    FreeBlock* freeListHead; // points to the first free memory block
     
 };
 
