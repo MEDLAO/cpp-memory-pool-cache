@@ -9,7 +9,10 @@
 
 MemoryPool::MemoryPool(std::size_t size) : buffer(nullptr), totalSize(size)
 {
+    buffer = new unsigned char[totalSize];
     
+    freeListHead = reinterpret_cast<FreeBlock*>(buffer);
+    freeListHead->next = nullptr;
 }
 
 MemoryPool::~MemoryPool()
