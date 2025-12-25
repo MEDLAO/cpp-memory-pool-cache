@@ -24,7 +24,7 @@ public:
 private:
     unsigned char* buffer; // start of memory
     std::size_t totalSize; // total bytes owned by the pool
-    std::size_t blocksize;
+    std::size_t blockSize;
     std::size_t blockCount;
     FreeBlock* freeListHead; // points to the first free memory block
     
