@@ -10,7 +10,7 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    MemoryPool pool(128);
+    MemoryPool pool(128, 32);
     
     std::cout << "MemoryPool constructed\n";
     

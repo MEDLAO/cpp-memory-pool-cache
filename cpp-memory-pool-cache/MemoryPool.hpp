@@ -18,7 +18,7 @@ struct FreeBlock {
 
 class MemoryPool {
 public:
-    MemoryPool(std::size_t size);
+    MemoryPool(std::size_t size, std::size_t blockSize);
     ~MemoryPool();
     
 private:
