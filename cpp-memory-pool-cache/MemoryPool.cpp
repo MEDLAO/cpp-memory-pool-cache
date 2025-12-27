@@ -22,11 +22,11 @@ MemoryPool::MemoryPool(std::size_t size, std::size_t blockSize)
     freeListHead->next = nullptr;
     
     // second block (no loop yet)
-    unsigned char* secondBlockAddress = buffer + blockSize;
+    /*unsigned char* secondBlockAddress = buffer + blockSize;
     FreeBlock* secondBlock = reinterpret_cast<FreeBlock*>(secondBlockAddress);
     
     freeListHead->next = secondBlock;
-    secondBlock->next = nullptr;
+    secondBlock->next = nullptr;*/
 }
 
 MemoryPool::~MemoryPool()
