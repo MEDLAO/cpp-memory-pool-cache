@@ -19,7 +19,8 @@ MemoryPool::MemoryPool(std::size_t size, std::size_t blockSize)
     
     // first block
     freeListHead = reinterpret_cast<FreeBlock*>(buffer);
-    freeListHead->next = nullptr;
+    //freeListHead->next = nullptr;
+    FreeBlock* current = freeListHead;
     
     // second block (no loop yet)
     /*unsigned char* secondBlockAddress = buffer + blockSize;
