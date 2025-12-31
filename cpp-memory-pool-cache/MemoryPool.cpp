@@ -34,7 +34,25 @@ MemoryPool::MemoryPool(std::size_t size, std::size_t blockSize)
     
 }
 
+void* MemoryPool::allocate()
+{
+    // If no free blocks, return nothing
+       if (freeListHead == nullptr) {
+           return nullptr;
+       }
+
+       // Take the first free block
+       FreeBlock* block = freeListHead;
+
+       // Move head to the next free block
+       freeListHead = freeListHead->next;
+
+       // Give the block to the user
+       return reinterpret_cast<void*>(block);
+}
+
 MemoryPool::~MemoryPool()
 {
     delete[] buffer;
 }
+
