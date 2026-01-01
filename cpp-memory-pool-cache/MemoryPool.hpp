@@ -21,6 +21,7 @@ public:
     MemoryPool(std::size_t size, std::size_t blockSize);
     ~MemoryPool();
     void* allocate();
+    void deallocate(void* ptr);
     
 private:
     unsigned char* buffer; // start of memory
