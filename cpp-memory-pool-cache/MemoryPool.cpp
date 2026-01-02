@@ -52,9 +52,9 @@ void* MemoryPool::allocate()
 
 void MemoryPool::deallocate(void* ptr)
 {
-    if (ptr == nullptr) {
-        return;
-    }
+    if (ptr == nullptr) return;
+    
+    unsigned char* raw = static_cast<unsigned char*>(ptr);
     
     // Treat the returned memory as a free block again
     FreeBlock* block = reinterpret_cast<FreeBlock*>(ptr);
