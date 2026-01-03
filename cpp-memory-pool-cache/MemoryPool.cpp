@@ -56,6 +56,10 @@ void MemoryPool::deallocate(void* ptr)
     
     unsigned char* raw = static_cast<unsigned char*>(ptr);
     
+    if (raw < buffer || raw >= buffer + totalSize) {
+        return; // pointer not from this pool
+    }
+    
     // Treat the returned memory as a free block again
     FreeBlock* block = reinterpret_cast<FreeBlock*>(ptr);
     
