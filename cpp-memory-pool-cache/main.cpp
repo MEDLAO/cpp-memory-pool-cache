@@ -15,10 +15,16 @@ int main(int argc, const char * argv[]) {
     void* a = pool.allocate();
     void* b = pool.allocate();
     
+    std::cout << "Allocated two blocks\n";
+    
     pool.deallocate(a);
     pool.deallocate(b);
     
-    std::cout << "MemoryPool constructed\n";
+    std::cout << "Deallocated two blocks\n";
+    
+    void* c = pool.allocate();
+    
+    std::cout << "Allocated again \n";
     
     return 0;
 }
