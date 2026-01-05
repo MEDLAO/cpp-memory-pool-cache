@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF324F122F0C5F9F00D4C8F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BFD68C2E2EF5C783000B57C1 /* MemoryPool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryPool.cpp; sourceTree = "<group>"; };
 		BFD68C2F2EF5C783000B57C1 /* MemoryPool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MemoryPool.hpp; sourceTree = "<group>"; };
 		BFF12CAC2EF31FE50029F128 /* cpp-memory-pool-cache */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cpp-memory-pool-cache"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +61,7 @@
 		BFF12CAE2EF31FE50029F128 /* cpp-memory-pool-cache */ = {
 			isa = PBXGroup;
 			children = (
+				BF324F122F0C5F9F00D4C8F4 /* README.md */,
 				BFF12CAF2EF31FE50029F128 /* main.cpp */,
 				BFD68C2E2EF5C783000B57C1 /* MemoryPool.cpp */,
 				BFD68C2F2EF5C783000B57C1 /* MemoryPool.hpp */,
