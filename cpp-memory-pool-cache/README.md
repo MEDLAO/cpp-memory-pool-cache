@@ -11,3 +11,18 @@ The project focuses on:
 - object lifetime
 - constant-time allocation
 - safe manual memory management
+
+---
+
+## Architecture
+
+The allocator is built from a few simple components:
+
+### 1. Big Memory Buffer
+The pool owns one contiguous block of memory:
+
+- Allocated once in the constructor
+- Released in the destructor
+- All blocks live inside this buffer
+
+
