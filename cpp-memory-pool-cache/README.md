@@ -1,28 +1,43 @@
 # C++ Memory Pool Allocator
 
 This project implements a simple fixed-size memory pool in C++.  
-The goal is to understand how dynamic memory allocation works *under the hood* by building a custom allocator from scratch.
+Its purpose is to understand how memory allocation works at a low level by building a small allocator from scratch.
+It was an opportunity to practice several C++ concepts such as raw memory management, pointers, and
+simple data structures.
 
-Instead of asking the operating system for memory each time, the pool allocates one big buffer and then manages it manually using fixed-size blocks and a free list.  
-This approach is common in high-performance systems (game engines, databases, real-time software).
-
-The project focuses on:
-- pointers and raw memory
-- object lifetime
-- constant-time allocation
-- safe manual memory management
+The pool allocates one big buffer and manages it manually using fixed-size blocks and a free list.  
+This avoids repeated calls to the operating system and makes allocation and deallocation constant time.
 
 ---
 
-## Architecture
+## How It Works
 
-The allocator is built from a few simple components:
+- One contiguous buffer is allocated in the constructor  
+- The buffer is split into equal-sized blocks  
+- Free blocks are linked using a simple free list  
 
-### 1. Big Memory Buffer
-The pool owns one contiguous block of memory:
+### Allocation
+- Take the first block from the free list  
+- Move the head forward  
+- Return the block as `void*`  
+- Runs in **O(1)**  
 
-- Allocated once in the constructor
-- Released in the destructor
-- All blocks live inside this buffer
+### Deallocation
+- Check that the pointer belongs to the pool  
+- Treat it as a free block again  
+- Insert it back into the free list  
+- Runs in **O(1)**  
 
+---
 
+## Example
+
+```cpp
+MemoryPool pool(128, 32);
+
+void* a = pool.allocate();
+void* b = pool.allocate();
+
+pool.deallocate(a);
+pool.deallocate(b);
+```
