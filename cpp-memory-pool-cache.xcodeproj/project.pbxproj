@@ -45,6 +45,7 @@
 		BFF12CA32EF31FE50029F128 = {
 			isa = PBXGroup;
 			children = (
+				BF324F122F0C5F9F00D4C8F4 /* README.md */,
 				BFF12CAE2EF31FE50029F128 /* cpp-memory-pool-cache */,
 				BFF12CAD2EF31FE50029F128 /* Products */,
 			);
@@ -61,7 +62,6 @@
 		BFF12CAE2EF31FE50029F128 /* cpp-memory-pool-cache */ = {
 			isa = PBXGroup;
 			children = (
-				BF324F122F0C5F9F00D4C8F4 /* README.md */,
 				BFF12CAF2EF31FE50029F128 /* main.cpp */,
 				BFD68C2E2EF5C783000B57C1 /* MemoryPool.cpp */,
 				BFD68C2F2EF5C783000B57C1 /* MemoryPool.hpp */,
